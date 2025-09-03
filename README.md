@@ -1,4 +1,4 @@
-# Codility
+# LeetCode
 Implementations of select LeetCode problems.
 
 All solutions were accepted and passed 100% of test cases.
