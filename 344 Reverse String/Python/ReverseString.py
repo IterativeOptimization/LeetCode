@@ -22,4 +22,4 @@ mySolution = Solution()
 mySolution.reverseString(s=input_value)
 
 # Display the final value.
-print("Input Value: {val}", input_value)
+print("Output Value: {val}", input_value)
