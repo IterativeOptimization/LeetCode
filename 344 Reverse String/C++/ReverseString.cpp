@@ -25,8 +25,8 @@ int main()
     cout << "Given input: " << display_input_string << endl;
 
     // Perform the operation on the data.
-    Solution* mySolution = new Solution();
-    mySolution->reverseString(input_value);
+    Solution mySolution = Solution();
+    mySolution.reverseString(input_value);
 
     // Display the final value.
     string display_output_string(input_value.begin(), input_value.end());
