@@ -63,8 +63,8 @@ int main()
     cout << "Given target: " << target << endl;
 
     // Perform the operation on the data.
-    Solution *mySolution = new Solution();
-    vector<int> output_value = mySolution->twoSum(input_value, target);
+    Solution mySolution = Solution();
+    vector<int> output_value = mySolution.twoSum(input_value, target);
 
     // Display the final value.
     string display_output_string(output_value.begin(), output_value.end());
