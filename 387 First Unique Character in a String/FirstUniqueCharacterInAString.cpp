@@ -1,0 +1,55 @@
+#include <iostream>
+
+using namespace std;
+
+class Solution
+{
+public:
+    int firstUniqChar(string s)
+    {
+        // Make note of each letter found in the string and the number of occurrences.
+        int character_counts[26] = {};
+        int value_of_a = 'a';
+        for (char each_char:s)
+        {
+            character_counts[(each_char - value_of_a)] += 1;
+        }
+
+        // Starting from the front of the string, report which letter is used only once, if any.
+        int iterations = 0;
+        for (char each_char:s)
+        {
+            if(character_counts[(each_char - value_of_a)] == 1)
+            {
+                return iterations;
+            }
+            iterations++;
+        }
+
+        // If no letter occurred a single time, return special value.
+        return -1;
+    }
+};      
+
+int main()
+{
+    // Various test cases.
+    // 0
+    // string input_value = "leetcode";
+
+    // 2
+    // string input_value = "loveleetcode";
+
+    // -1
+    string input_value = "aabb";
+
+    // Display the starting value.
+    cout << "Input Value One: " << input_value << endl;
+
+    // Perform the operation on the data.
+    Solution mySolution = Solution();
+    int output_value = mySolution.firstUniqChar(input_value);
+
+    // Display the final value.
+    cout << "Output Value: " << output_value << endl;
+}
